@@ -1,0 +1,32 @@
+#include "constants.fc";
+#include "err-codes.fc";
+#include "op-codes.fc";
+#include "stdlib.fc";
+
+int mod(int x, int y)                  asm "MOD";
+
+() force_chain(slice addr) impure {
+    (int wc, _) = parse_std_addr(addr);
+    throw_unless(err::incorrect_workchain, wc == workchain);
+}
+
+(slice, slice, slice) unpack_full_domain(cell full_domain) {
+    slice full_domain_slice = full_domain.begin_parse();
+    return (
+        full_domain_slice~load_ref().begin_parse(),
+        full_domain_slice~load_ref().begin_parse(),
+        full_domain_slice~load_ref().begin_parse()
+    );
+}
+
+slice pack_full_domain(slice tld, slice domain, slice subdomain) {
+    return begin_cell()
+        .store_slice(tld)
+        .store_uint(0, 8)
+        .store_slice(domain)
+        .store_uint(0, 8)
+        .store_slice(subdomain)
+        .store_uint(0, 8)
+        .end_cell()
+        .begin_parse();
+}

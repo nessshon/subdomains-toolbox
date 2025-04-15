@@ -1,0 +1,3 @@
+[submodule "manager-contract"]
+	path = manager-contract
+	url = https://github.com/Gusarich/simple-subdomain

@@ -1,0 +1,17 @@
+services:
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: "ton-subdomains-metadata-api"
+    restart: always
+    ports:
+      - "8001:8001"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    volumes:
+      - ./app:/app
