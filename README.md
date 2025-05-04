@@ -1,6 +1,7 @@
 # TON DNS Subdomains Toolbox
 
-A set of tools for working with subdomains in the TON Blockchain, including smart contracts, a metadata generation API, and a step-by-step usage guide.
+A set of tools for working with subdomains in the TON Blockchain, including smart contracts, a metadata generation API,
+and a step-by-step usage guide.
 
 ## Repository Structure
 
@@ -19,7 +20,8 @@ A [step-by-step guide](GUIDE.md) for deploying and using the components of this 
 A [smart contract](manager-contract) for managing subdomains without NFTs.
 
 **Description:**  
-A minimalistic solution where a single contract centrally manages all subdomains. Only the administrator can issue subdomains and manage their records. Suitable for simple use cases where ownership transfer is not required.
+A minimalistic solution where a single contract centrally manages all subdomains. Only the administrator can issue
+subdomains and manage their records. Suitable for simple use cases where ownership transfer is not required.
 
 ---
 
@@ -34,7 +36,8 @@ A minimalistic solution where a single contract centrally manages all subdomains
 - `free-mint` — open and free minting for all users
 
 **Description:**  
-A more flexible approach where each subdomain is a distinct NFT. The collection contract serves as the subdomain manager. NFT owners have full control over their subdomains, including the ability to manage, transfer, or trade them.
+A more flexible approach where each subdomain is a distinct NFT. The collection contract serves as the subdomain
+manager. NFT owners have full control over their subdomains, including the ability to manage, transfer, or trade them.
 
 ---
 
@@ -46,6 +49,20 @@ An [API service](metadata-api) for generating images and metadata for subdomains
 
 - Generates PNG images containing subdomain names
 - Produces JSON metadata compatible with TON NFT standards
+
+## Contribution
+
+We welcome your contributions! If you have ideas for improvement or have identified a bug, please create an issue or
+submit a pull request.
+
+## Donations
+
+Your donation supports the future of this project. Every contribution helps stimulate innovation and sustain
+development!
+
+**TON** - `UQCDrgGaI6gWK-qlyw69xWZosurGxrpRgIgSkVsgahUtxZR0`
+
+**USDT** (TRC-20) - `TGKmm9H3FApFw8xcgRcZDHSku68vozAjo9`
 
 ## License
 
